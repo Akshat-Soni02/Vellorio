@@ -1,0 +1,8 @@
+.loadHead {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    transform: scale(0.06);
+}
