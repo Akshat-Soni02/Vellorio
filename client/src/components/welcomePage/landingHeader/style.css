@@ -1,0 +1,35 @@
+.loadHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem;
+    font-size: 1.2rem;
+    box-shadow: 0.1px 0.1px 6px 0.3px rgba(0, 0, 0, 0.218);
+}
+
+img {
+    width: 9rem;
+    height: auto;
+    cursor: pointer;
+}
+
+.subdiv {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover, .sign:hover {
+    color: #000000a9;
+    cursor: pointer;
+}
+
+a:active, .sign:active {
+    color: rgb(202, 157, 8);
+}

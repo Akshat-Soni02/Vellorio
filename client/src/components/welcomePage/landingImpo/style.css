@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+.impo{
+    background-color: rgba(164, 155, 155, 0.162);
+    width: 100%;
+}
+
+.impodiv {
+    /* width: 100%; */
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-inline: auto;
+    align-content: center;
+    padding: 10rem;
+}
+
+.impoleft {
+    font-weight: 400;
+    font-size: 1.7rem;
+    max-width: 35%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.imporight {
+    max-width: 45%;
+    /* font-family: 'Courier New', Courier, monospace; */
+}

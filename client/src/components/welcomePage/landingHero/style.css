@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem;
+    font-family: 'Roboto Mono', monospace;
+    width: 100vw;
+    font-size: 1.4rem;
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+.right {
+    max-width: 60%;
+}
+
+.heroImage {
+    margin-left: 10rem;
+    width: clamp(50%,70%,90%);
+}
+
+.left {
+    max-width: 40%;
+}
+
+.heading {
+    font-weight: 400;
+    font-size: 2.4rem;
+}
+
+.heroButton {
+    background-color: black;
+    color: white;
+    padding: 0.7rem;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.heroButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.icons {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons span {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.para{
+    font-size: 1rem;
+    /* padding:; */
+}
+
+.gr,.si,.fi {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+}
