@@ -1,23 +1,23 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import logo from "../../../assets/Screenshot 2023-11-11 222117.png";
 import { Link } from 'react-router-dom';
 import "./style.css";
 
 const LandingHeader = () => {
-
+  const navigate = useNavigate();
   const navToLogin = () => {
-    <Navigate to={"/login"}/>
+    navigate("/login");
   }
 
   return (
     <div className='loadHead'>
         <img src={logo} alt="vellorio"/>
         <div className='subdiv'>
-            <Link to="#about">About</Link>
-            <Link to= "#offer">Product</Link>
+            {/* <Link to="#about">About</Link> */}
+            {/* <Link to= "#offerSection">Our Product</Link> */}
         </div>
-        <div className="sign" onClick={navToLogin()}>Sign up</div>
+        <div className="sign" onClick={navToLogin}>Get Started</div>
     </div>
   )
 }

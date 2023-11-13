@@ -1,0 +1,31 @@
+.abouts{
+    background-color: rgba(164, 155, 155, 0.162);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.followPages {
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.copy {
+    background-color: black;
+    color: white;
+    padding: 0.1px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.linkFooter{
+    text-decoration: underline;
+}

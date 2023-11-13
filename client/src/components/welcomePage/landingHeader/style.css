@@ -25,11 +25,26 @@ a {
     text-decoration: none;
 }
 
-a:hover, .sign:hover {
+a:hover {
     color: #000000a9;
     cursor: pointer;
 }
 
-a:active, .sign:active {
+a:active {
     color: rgb(202, 157, 8);
+}
+
+.sign {
+    background-color: rgb(252,186,48);
+    color: black;
+    border-radius: 4px;
+    padding: 0.4rem;
+    border: 1.5px solid black;
+    font-size: 0.9rem;
+}
+
+.sign:hover{
+    cursor: pointer;
+    background-color: black;
+    color: rgb(252,186,48);
 }

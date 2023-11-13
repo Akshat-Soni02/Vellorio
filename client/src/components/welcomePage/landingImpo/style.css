@@ -13,7 +13,7 @@
     justify-content: space-between;
     margin-inline: auto;
     align-content: center;
-    padding: 10rem;
+    padding: 9rem;
 }
 
 .impoleft {
@@ -25,5 +25,6 @@
 
 .imporight {
     max-width: 45%;
+    font-weight: 350;
     /* font-family: 'Courier New', Courier, monospace; */
 }

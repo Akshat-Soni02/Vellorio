@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+
+.offerSection{
+    max-width: 80%;
+    margin-inline: auto;
+    padding: 4rem;
+}
+
+.outerOffer {
+    max-width: 100%;
+}
+
+.offer-title {
+    font-weight: 400;
+    font-size: 1.7rem;
+    /* max-width: 35%; */
+    font-family: 'Roboto Mono', monospace;
+    padding-bottom: 1rem;
+}
+
+.offer-content {
+    padding-bottom: 3rem;
+    font-weight: 350;
+    max-width: 40%;
+}
+
+.offer2{
+    max-width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.offer2-card {
+    width: calc(20% - 0.75rem);
+    min-height: 50vh;
+}
+
+.offer2-card1-image {
+    background-image: url(../../../assets/6367ddcc892c1187a6411807_6259f65d8721400521bb229a_Flow-State-of-Mind.png);
+    min-height: 17rem;
+    width: 100%;
+    background-size: cover;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    background-position: center;
+}
+
+.offer2-card2-image {
+    background-image: url(../../../assets/flow-state-featured-image.jpg);
+    min-height: 17rem;
+    width: 100%;
+    background-size: cover;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    background-position: center;
+}
+
+.offer2-card3-image {
+    background-image: url(../../../assets/Sales-and-customer-service-have-more-in-common-than-you-might-think.jpg);
+    min-height: 17rem;
+    width: 100%;
+    background-size: cover;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    background-position: center;
+}
+
+.offer2-card4-image {
+    background-image: url(../../../assets/User-Flow-for-your-UX-Design.jpg);
+    min-height: 17rem;
+    width: 100%;
+    background-size: cover;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    background-position: center;
+}
+
+.offer2-card-title {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.offer2-card-content {
+    font-weight: 350;
+}
+
+
+
+
