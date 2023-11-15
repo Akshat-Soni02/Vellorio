@@ -9,7 +9,7 @@ const UserSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        uniqure: true,
+        unique: true,
     },
     password: {
         type: String,
@@ -56,6 +56,10 @@ const UserSchema = new mongoose.Schema({
     skills: {
         type: Array,
         default: [],
+    },
+    education: {
+        type: String,
+        default: "",
     },
     projectsDelievered: {
         type: Array,

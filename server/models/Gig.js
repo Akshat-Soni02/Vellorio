@@ -40,6 +40,10 @@ const GigSchema = new mongoose.Schema({
     gallery: {
         type: Array,
         default: [],
+    },
+    rating: {
+        type: Number,
+        default: 0,
     }
 });
 

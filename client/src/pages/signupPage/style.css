@@ -7,7 +7,7 @@
 }
 
 
-.loginSection{
+.signupSection{
     background-color:#f1f1f1;
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@
     height: 100vh;
 }
 
-.lform{
+.sform{
     background-color: white;
     padding: 2rem;
     width: clamp(230px,80vw,350px);
@@ -27,38 +27,47 @@
     box-shadow: 0.5px 0.5px 12px 0.2px #e1e0e0;
 }
 
-.lform-intro{
+.sform-intro{
     text-align: center;
 }
 
-.lform-icon{
-    font-size: 1.7rem;
+.sform-icon{
+    font-size: 3.5rem;
     color: #4D62FD;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.lform-title{
+.sform-icon:hover{
+    filter:brightness(0.8);
+}
+
+
+
+.sform-title{
     font-weight: 600;
     margin: 0;
     padding: 0;
+    margin-bottom: 8px;
 }
 
-.lform-subtitle{
+.sform-subtitle{
     font-size: 0.95rem;
     color: rgb(143, 137, 137);
     margin-bottom: 15px;
     padding: 0;
 }
 
-.lform-fields{
+.sform-fields{
     width: 100%;
 }
 
-.lform-fieldname{
+.sform-fieldname{
     color: rgb(143, 137, 137);
 }
 
 
-.lform-field-input{
+.sform-field-input{
     outline: none;
     border: none;
     background-color: transparent;
@@ -69,11 +78,11 @@
     font-size: 1rem;
 }
 
-.lform-field-input-container{
+.sform-field-input-container{
     position: relative;
 }
 
-.lform-fieldIcon{
+.sform-fieldIcon{
     position: absolute;
     bottom: 13px;
     right: 0;
@@ -84,29 +93,35 @@
     bottom: 10px;
 }
 
-.lform-authAction{
+.sform-authAction{
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
     font-size: clamp(9.6px,3.3vw,14px);
     cursor: pointer;
     margin-bottom: 20px;
 }
 
-.lform-authAction:hover, .lform-authAction:focus{
+.sform-authAction:hover, .sform-authAction:focus{
     opacity: 0.85;
 }
 
-.lform-authAction-signup{
+.sform-authAction-signup{
     color: rgb(143, 137, 137);
 }
 
-.lform-authAction-forgot{
+.sform-authAction-forgot{
     color: #4D62FD;
 }
 
-.lform-login-button{
-    padding: 0.4rem;
+.sform-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.sform-login-button{
+    padding: clamp(5px,1.6vw,6.4px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,15 +130,15 @@
     border: none;
     border-radius: 5px;
     min-width: 80px;
-    font-size: 1.1rem;
+    font-size: clamp(13px,4.5vw,17.6px);
 }
 
-.lform-login-button:hover, .lform-login-button:focus{
+.sform-login-button:hover, .sform-login-button:focus{
     background-color: #4d61fdd5;
 }
 
 
-.lform-line-text-line {
+.sform-line-text-line {
     position: relative;
     text-align: center;
     width: 100%;
@@ -157,7 +172,7 @@ right: 100%;
 left: 100%;
 }
 
-.lform-thirdPartyLogin{
+.sform-thirdPartyLogin{
     display: flex;
     justify-content: space-evenly;
     width: 100%;

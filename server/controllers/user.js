@@ -91,6 +91,9 @@ export const updateUserDetails = async (req, res, next) => {
       if (updatedDetails.skills) {
         user.skills = updatedDetails.skills;
       }
+      if(updatedDetails.education) {
+        user.education = updatedDetails.education;
+      }
   
       await user.save();
   
@@ -105,7 +108,7 @@ export const updateUserDetails = async (req, res, next) => {
 
 export const registerCreator = async (req, res, next) => {
     try {
-      const { description, languages, skills } = req.body;
+      const { description, languages, skills, education } = req.body;
       const { id } = req.params;
       const user = await User.findById(id);
   
@@ -116,6 +119,7 @@ export const registerCreator = async (req, res, next) => {
       user.languages = languages;
       user.description = description;
       user.skills = skills;
+      user.education = education;
   
       await user.save();
   
