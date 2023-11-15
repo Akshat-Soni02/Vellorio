@@ -15,7 +15,7 @@ const Footer = () => {
                 <div className="links">
                     <p className="title">Quick Links</p>
                     <Link className = "linkFooter" to="#terms">Terms & Conditions</Link>
-                    {/* <Link to="#policy">Privacy Policy</Link> */}
+                    <Link className = "linkFooter" to="#policy">Privacy Policy</Link>
                 </div>
                 <div className="follow">
                     <p className="title">Follow</p>

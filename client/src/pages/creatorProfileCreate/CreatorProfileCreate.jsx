@@ -1,9 +1,14 @@
 import React from 'react'
-import footer from "../../components/footer/Footer.jsx"
+import Footer from "../../components/footer/Footer.jsx"
 
 const CreatorProfileCreate = () => {
   return (
-    <footer/>    
+    <>
+        <section className="creatorData">
+            
+        </section>
+        <Footer/>
+    </>   
   )
 }
 

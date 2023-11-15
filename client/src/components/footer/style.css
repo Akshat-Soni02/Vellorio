@@ -1,9 +1,9 @@
 .abouts{
     background-color: rgba(164, 155, 155, 0.162);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 5rem 0;
+    padding: 4rem;
 }
 
 .title {
@@ -11,21 +11,96 @@
     font-size: 1.5rem;
 }
 
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.follow{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .followPages {
-    font-weight: 500;
+    font-weight: 300;
     font-size: 1.1rem;
-    text-decoration: underline;
     cursor: pointer;
 }
 
 .copy {
     background-color: black;
     color: white;
-    padding: 0.1px;
+    padding: 5px;
     font-size: 0.8rem;
     text-align: center;
 }
 
 .linkFooter{
     text-decoration: underline;
+}
+
+@media screen and (max-width: 690px) {
+    .abouts {
+        padding: 1.5rem;
+    }
+    .title {
+        font-size: 1.2rem;
+    }
+    .contact, .links, .follow {
+        gap: 0.4rem;
+    }
+    .followPages {
+        font-size: 0.9rem;
+    }
+    .linkFooter, .add, .add2, .num {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .abouts {
+        padding: 1rem;
+    }
+    .title {
+        font-size: 1.1rem;
+    }
+    .contact, .links, .follow {
+        gap: 0.2rem;
+    }
+    .followPages {
+        font-size: 0.7rem;
+    }
+    .linkFooter, .add, .add2, .num {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .abouts {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+        /* padding: 1.5rem; */
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .contact, .links, .follow {
+        text-align: center;
+        gap: 0.2rem;
+    }
+    .followPages {
+        font-size: 1.1rem;
+    }
+    .linkFooter, .add, .add2, .num {
+        font-size: 1.1rem;
+    }
 }

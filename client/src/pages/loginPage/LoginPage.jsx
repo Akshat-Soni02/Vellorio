@@ -27,6 +27,10 @@ const LoginPage = () => {
     e.preventDefault();
   }
 
+  const directToSignup = () => {
+    navigate("/register");
+  }
+
   return (
     <section className="loginSection">
       <form className="lform" onSubmit={submitHandler}>
@@ -52,7 +56,7 @@ const LoginPage = () => {
           </div>
         </div>
         <div className="lform-authAction">
-          <p className="lform-authAction-signup" tabIndex={0}>Create a New Account</p>
+          <p className="lform-authAction-signup" tabIndex={0} onClick={directToSignup}>Create a New Account</p>
           <p className="lform-authAction-forgot" tabIndex={0}>forgot password?</p>
         </div>
         <div className="lform-buttons">

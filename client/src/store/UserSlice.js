@@ -33,19 +33,19 @@ const userSlice = createSlice({
   },
 });
 
-export const loginAction = (userData) => async (dispatch) => {
-  try {
-    dispatch(setLoading());
+// export const loginAction = (userData) => async (dispatch) => {
+//   try {
+//     dispatch(setLoading());
 
-    // Call the login API
-    const response = await loginApi(userData);
+//     // Call the login API
+//     const response = await loginApi(userData);
 
-    // Dispatch the setCurrentUser action with the user data if successful
-    dispatch(setCurrentUser(response.data));
-  } catch (error) {
-    dispatch(setError(error.message));
-  }
-};
+//     // Dispatch the setCurrentUser action with the user data if successful
+//     dispatch(setCurrentUser(response.data));
+//   } catch (error) {
+//     dispatch(setError(error.message));
+//   }
+// };
 
 export const { setCurrentUser, logout, setLoading, setError } = userSlice.actions;
 export default userSlice.reducer;
