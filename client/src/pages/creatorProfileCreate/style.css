@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.cpHeader{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.proInfo{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.cpHeader,.cpDescribe,.cpData{
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.progress {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    padding: 10px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.prog_list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 7px;
+    margin-left: 5px;
+}
+
+.per{
+    color: rgb(80, 158, 80);
+    text-align: center;
+}
+
+.cpDescribe {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    padding: 0.7rem 5px;
+    text-align: justify;
+    font-size: 0.85rem;
+}
+
+.cp-des-h {
+    margin-bottom: 0.5rem;
+    color: rgb(56, 56, 56);
+}
+
+.cp-des-p {
+    color: rgb(87, 87, 87);
+    max-width: 90%;
+}
+
+.cpForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    gap: 1.5rem;
+    margin-top: 5px;
+}
+
+.cpField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8px;
+}
+
+.redDot{
+    color: red;
+    font-size: 0.85rem;
+    margin-left: 1px;
+}
+
+.cpInput {
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    border-radius: 3px;
+    padding: 4px;
+    color: rgb(48, 48, 48);
+}
+
+.desInput {
+    height: 100px;
+    outline: none;
+}
+
+.lanInput,.eduInput, .skillInput {
+    height: 35px;
+}
+
+.cpButtonSubmit{
+    width: min(20%,100px);
+    height: 1.7rem;
+    color: whitesmoke;
+    background-color: rgb(70, 139, 70);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-inline: auto;
+}
+
+.lInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opTemp {
+    background-color:rgba(240, 236, 236, 0.945);
+    padding: 1px 8px;
+}
+
+.selectedL{
+    display: flex;
+}
+
+.searchCustom{
+    display: none;
+}
+
+.searchIco{
+    /* background-color: black; */
+    display: none;
+}
+
+.customLanInput{
+    background-color: antiquewhite;
+    width: 50%;
+}
+
+.cpButtonSubmit:hover, .cpButtonSubmit:focus {
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+    .progress{
+        padding: 15px 1rem;
+    }
+    .cpDescribe{
+        padding: 1rem 1rem;
+    }
+    .cp-des-p {
+        max-width: 55%;
+    }
+    .cpData{
+        flex-grow: 1;
+    }
+    .cpForm{
+        height: 100%;
+        padding: 0  1rem;
+    }
+    .cpField {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cpInput {
+        width: max(400px,55vw);
+    }
+
+    .cpButtonSubmit{
+        margin-inline: 0;
+    }
+}
+
+
+
+

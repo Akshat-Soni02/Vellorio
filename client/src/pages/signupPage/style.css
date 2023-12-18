@@ -31,11 +31,26 @@
     text-align: center;
 }
 
+/* .sform-icon-div{
+  width: 50px; /* Adjust the size as needed */
+  /* height: 50px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%; */
+
+
 .sform-icon{
     font-size: 3.5rem;
     color: #4D62FD;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.sform-prof-img{
+    width: 60px;
+    height: 60px;
+    /* object-fit: cover;
+    object-position: center center; */
 }
 
 .sform-icon:hover{
@@ -184,9 +199,16 @@ left: 100%;
 }
 
 .twt{
-    color: #1DA1F2;
+    color: #000000;
 }
 
 .ic:hover, .ic:focus{
     border-bottom: 1px solid rgb(110, 106, 106);
+}
+
+.loadScreen{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
 }

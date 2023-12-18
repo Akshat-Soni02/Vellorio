@@ -4,6 +4,8 @@ import LandingPage from './pages/landingPage/LandingPage';
 import LoginPage from './pages/loginPage/LoginPage';
 import SignUpPage from './pages/signupPage/SignUpPage';
 import CreatorProfileCreate from './pages/creatorProfileCreate/CreatorProfileCreate';
+import CreatorHomePage from './pages/creatorHomePage/CreatorHomePage';
+import ClientHomePage from './pages/clientHomePage/ClientHomePage';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path='/login' element = {<LoginPage/>} />
         <Route path='/register' element = {<SignUpPage/>} />
         <Route path='/creator/profileCreate' element = {<CreatorProfileCreate/>} />
+        <Route path='/creator/DashBoard' element = {<CreatorHomePage/>} />
+        <Route path='/client/products' element = {<ClientHomePage/>} />
       </Routes>
     </Router>
   );
