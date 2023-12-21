@@ -16,7 +16,7 @@ import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import {setLoading,login, logout} from "../../store/UserSlice.js";
 import { signupRoute } from '../../api/ApiRoutes.js';
-import toast from 'react-hot-toast';
+import {Toaster, toast} from 'react-hot-toast';
 import ClipLoader from "react-spinners/ClipLoader";
 import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader.js'
 
@@ -43,6 +43,7 @@ const SignUpPage = () => {
     reader.onloadend = () => {
       setImagePreview(reader.result)
       setProfilePhoto(imgfile);
+      toast.success("Profile photo added successfully");
     }
   };
 
@@ -53,7 +54,6 @@ const SignUpPage = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     dispatch(setLoading());
-    console.log(profilePhoto);
 
     try {
       const { data } = await axios.post(
@@ -98,13 +98,14 @@ const SignUpPage = () => {
 
   return (
     <div className="loadingEff">
+      <Toaster/>
       {loading ? (
         <div className="loadScreen">
           <ClipLoader
             color={"36D9B8"}
             loading={loading}
             // cssOverride={override}
-            size={45}
+            size={35}
             aria-label="Loading Spinner"
             data-testid="loader"
           />

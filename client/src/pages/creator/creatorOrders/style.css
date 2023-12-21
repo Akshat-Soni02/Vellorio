@@ -1,0 +1,9 @@
+.Dash{
+    display: flex;
+    align-items: start;
+}
+
+.MainSb{
+    position: sticky;
+    top: 0;
+}

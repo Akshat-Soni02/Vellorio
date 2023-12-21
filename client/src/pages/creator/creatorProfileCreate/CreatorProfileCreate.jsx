@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../../assets/Screenshot 2023-11-11 222117.png"
+import logo from "../../../assets/Screenshot 2023-11-11 222117.png"
 import "./style.css"
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 import { Dropdown } from 'primereact/dropdown';

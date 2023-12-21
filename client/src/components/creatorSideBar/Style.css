@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.sb-outer{
+    background-color: #F9F9FA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    height: 100vh;
+    padding: 15px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sb-panel1{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: center;
+}
+
+.sb-img-container{
+    margin-top: 1rem;
+}
+
+.logo_img_sb{
+    width: 7rem;
+    height: auto;
+}
+
+.sb-nav-panel{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sb-navs{
+    display: flex;
+    gap: 0.4rem;
+    color: #646466;
+    padding-left: 1.1rem;
+    border-left: 4px solid #F9F9FA;/*change the border color*/
+    height: 3rem;
+    align-items: center;
+    /* position: relative; */
+}
+
+/* .sb-navs::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #F9F9FA;
+    border-radius: 50%;
+    transition: transform 500ms ease-in;
+    transform: scale(1.5);
+}
+
+.sb-navs:hover::before, .sb-navs:focus::before{
+    transform: scale(0);
+}
+
+.sb-navs {
+    z-index: 1;
+    overflow: hidden;
+    background-color: rgba(90, 90, 92, 0.353);
+} */
+
+.sb-navs:hover,.sb-navs:focus{
+    /* background-color: #e1e1e5; */
+    /* filter: invert(1); */
+    outline: none;
+    cursor: pointer;
+    color: #514BFF;
+    border-left: 4px solid #514BFF;
+}
+
+.sb-icons{
+    font-size: 1.15rem;
+}
+
+.sb-logout-btn{
+    display: flex;
+    gap: 0.4rem;
+}
+
+/* color-for-select = #514BFF */

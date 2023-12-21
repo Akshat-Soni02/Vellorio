@@ -1,0 +1,14 @@
+.Crh{
+    display: flex;
+    justify-content: space-between;
+}
+
+.userDet{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Crh-user{
+    display: flex;
+    
+}

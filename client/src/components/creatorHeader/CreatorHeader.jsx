@@ -1,27 +1,30 @@
 import React from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
-import logo from "../../assets/Screenshot 2023-11-11 222117.png";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import ava from '../../assets/avatar-icon.jpg';
+import { GoBell } from "react-icons/go";
+import { IoIosArrowDown } from "react-icons/io";
 import "./style.css";
 
-const CreatorHeader = () => {
+
+const CreatorHeader = (heading,avatar,userName) => {
   const navigate = useNavigate();
-  const navToLogin = () => {
-    navigate("/login");
-  }
 
   return (
-    <div className='CrHead'>
-        <img className = "crHeadLogo" src={logo} alt="vellorio"/>
-        <div className='crHead-links'>
-            <Link to= "#DashBoard">DashBoard</Link>
-            <Link to="#myBussiness">My Bussiness</Link>
+    <header className='Crh'>
+      <div className="HeadName">Heading</div>
+      <div className="userDet">
+        <div className="noti">
+          <GoBell/>
         </div>
-        <div className="crHead-shortCuts">
-            <Link to="#notifications">Notifications</Link>
+        <div className="Crh-user">
+          <div className="Crh-user-avatar">
+            <img src={ava} alt=''/>
+          </div>
+          Name
+          <IoIosArrowDown/>
         </div>
-        {/* <div className="" onClick={navToLogin}>Get Started</div> */}
-    </div>
+      </div>
+    </header>
   )
 }
 
