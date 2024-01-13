@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
-import LandingPage from './pages/landingPage/LandingPage';
+// import LandingPage from './pages/landingPage/LandingPage';
 import LoginPage from './pages/loginPage/LoginPage';
 import SignUpPage from './pages/signupPage/SignUpPage';
 import CreatorProfileCreate from './pages/creator/creatorProfileCreate/CreatorProfileCreate';
@@ -11,13 +11,14 @@ import CreatorGigs from './pages/creator/creatorGigs/CreatorGigs';
 import CreatorEarnings from './pages/creator/creatorEarnings/CreatorEarnings';
 import CreatorAnalytics from './pages/creator/creatorAnalytics/CreatorAnalytics';
 import CreatorContact from './pages/creator/creatorContact/CreatorContact';
+import Demo from './pages/demo/Demo';
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/welcome' element = {<LandingPage/>} />
+        <Route path='/welcome' element = {<Demo/>} />
         <Route path='/login' element = {<LoginPage/>} />
         <Route path='/register' element = {<SignUpPage/>} />
         <Route path='/creator/profileCreate' element = {<CreatorProfileCreate/>} />

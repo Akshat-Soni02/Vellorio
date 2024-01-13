@@ -6,14 +6,19 @@ import {AiFillEyeInvisible} from "react-icons/ai"
 import {BsArrowRightShort} from "react-icons/bs"
 import {FcGoogle} from "react-icons/fc"
 import {BiLogoFacebook} from "react-icons/bi"
-import {AiOutlineTwitter} from "react-icons/ai"
+import { FaXTwitter } from "react-icons/fa6"
 import { useDispatch,useSelector} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import "./style.css"
+import { loginRoute } from '../../api/ApiRoutes'
+import { login, setLoading, logout } from '../../store/UserSlice'
+import { toast,Toaster } from 'react-hot-toast'
+import axios from 'axios'
 
 
 const LoginPage = () => {
   const dispatch = useDispatch();
+  const {isAuthenticated} = useSelector((state) => state.user);
   const navigate = useNavigate();
   const [visible,setVisible] = useState(false);
   const [email, setEmail] = useState("");
@@ -25,7 +30,33 @@ const LoginPage = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-  }
+    setLoading(true);
+
+    try {
+      const { data } = await axios.post(
+        loginRoute,
+        {
+          email,
+          password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
+
+      toast.success(data.message);
+      console.log(data);
+      dispatch(login({user: data}));
+    } catch (error) {
+      toast.error(error.response.data.message);
+      dispatch(logout());
+    }
+  };
+
+  if(isAuthenticated) navigate("/creator/Dashboard");
 
   const directToSignup = () => {
     navigate("/register");
@@ -33,6 +64,7 @@ const LoginPage = () => {
 
   return (
     <section className="loginSection">
+      <Toaster/>
       <form className="lform" onSubmit={submitHandler}>
         <div className="lform-intro">
             <MdLogin className='lform-icon'/>
@@ -68,7 +100,7 @@ const LoginPage = () => {
         <div className="lform-thirdPartyLogin">
           <FcGoogle className='gg ic' tabIndex={0}/>
           <BiLogoFacebook className='fb ic' tabIndex={0}/>
-          <AiOutlineTwitter className='twt ic' tabIndex={0}/>
+          <FaXTwitter className='twt ic' tabIndex={0}/>
         </div>
       </form>
     </section>

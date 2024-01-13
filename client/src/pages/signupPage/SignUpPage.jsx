@@ -156,7 +156,7 @@ const SignUpPage = () => {
             </div>
           </div>
           <div className="sform-authAction">
-            <p className="sform-authAction-forgot" tabIndex={0}>Login Instead?</p>
+            <p className="sform-authAction-forgot" tabIndex={0} onClick={() => navigate("/login")}>Login Instead?</p>
           </div>
           <div className="sform-subtitle">Continue as</div>
           <div className="sform-buttons">

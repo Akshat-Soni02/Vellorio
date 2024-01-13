@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .sb-outer{
-    background-color: #F9F9FA;
+    background-color: white;
+    /* background-color: #F9F9FA; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 170px;
+    width: 180px;
     height: 100vh;
     padding: 15px 0;
     font-family: 'Roboto', sans-serif;
@@ -32,17 +33,22 @@
 .sb-nav-panel{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 93%;
+    margin-inline: auto;
+    
 }
 
 .sb-navs{
     display: flex;
     gap: 0.4rem;
-    color: #646466;
+    /* color: #646466; */
+    color: #000000;
     padding-left: 1.1rem;
-    border-left: 4px solid #F9F9FA;/*change the border color*/
-    height: 3rem;
+    border-radius: 10px;
+    height: 2.5rem;
     align-items: center;
+    text-decoration: none;
+    font-size: 0.9rem;
     /* position: relative; */
 }
 
@@ -71,12 +77,14 @@
 } */
 
 .sb-navs:hover,.sb-navs:focus{
-    /* background-color: #e1e1e5; */
+    background-color: #07686b;
     /* filter: invert(1); */
     outline: none;
     cursor: pointer;
-    color: #514BFF;
-    border-left: 4px solid #514BFF;
+    /* color: #514BFF;
+    border-left: 4px solid #514BFF; */
+    color: white;
+    /* border-left: 4px solid #a8dadc; */
 }
 
 .sb-icons{

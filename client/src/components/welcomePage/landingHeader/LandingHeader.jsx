@@ -13,10 +13,6 @@ const LandingHeader = () => {
   return (
     <div className='loadHead'>
         <img src={logo} alt="vellorio"/>
-        <div className='subdiv'>
-            {/* <Link to="#about">About</Link> */}
-            {/* <Link to= "#offerSection">Our Product</Link> */}
-        </div>
         <div className="sign" onClick={navToLogin}>Get Started</div>
     </div>
   )

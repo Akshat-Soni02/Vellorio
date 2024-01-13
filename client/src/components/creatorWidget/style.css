@@ -1,0 +1,44 @@
+.widgetItem{
+    width: 218px;
+    padding: 1rem 1.2rem;
+    border: 1px solid rgb(209, 205, 205);
+    border-radius: 10px;
+    position: relative;
+}
+
+.widgetInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.widgetIcon{
+    background-color: rgba(39, 181, 134, 0.423);
+    display: grid;
+    place-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.widgetData{
+    display: flex;
+    flex-direction: column;
+}
+
+.widgetNums{
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.widgetTitle{
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.widgetPer{
+    position: absolute;
+    top: 7px;
+    right: 16px;
+    color: rgb(11, 176, 33);
+}

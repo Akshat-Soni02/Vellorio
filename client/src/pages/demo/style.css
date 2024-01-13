@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.landingParent{
+    width: 100%;
+}
+
+/* header css */
+
+.loadHead {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    box-shadow: 0.1px 0.1px 6px 0.3px rgba(0, 0, 0, 0.218);
+}
+
+.loadHead-img {
+    width: 9rem;
+    height: auto;
+    cursor: pointer;
+}
+
+.sign-in {
+    background-color: rgb(252,186,48);
+    color: black;
+    border-radius: 4px;
+    padding: 0.4rem;
+    border: 1.5px solid black;
+    font-size: 0.9rem;
+}
+
+.sign-in:hover, .sign-in:focus{
+    cursor: pointer;
+    background-color: black;
+    color: rgb(252,186,48);
+}
+
+/* hero section */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 3rem 0;
+    max-width: 80%;
+    margin-inline: auto;
+    align-items: center;
+}
+
+.right {
+    width: fit-content;
+}
+
+.heroImage {
+    width: clamp(255px,42vw,500px);
+}
+
+.hero-content-org{
+    max-width: 80%;
+}
+
+.heading {
+    font-weight: 400;
+    font-size: clamp(1.5rem,2.5vw,2.4rem);
+    /* font-size: 2.4rem; */
+}
+
+.heroButton {
+    background-color: black;
+    color: white;
+    padding: 0.7rem;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.heroButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.icons {
+    padding: 2rem 0;
+    max-width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons span {
+    text-align: justify;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+
+
+.para{
+    font-size: clamp(12px,0.9rem,18px);
+    text-align: justify;
+}
+
+.gr,.si,.fi {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: fit-content;
+    font-size: clamp(14px,1.8vw,22.4px);
+}
+
+.ic-1, .ic-2, .ic-3{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .ic-2{
+    width: 95px;
+}
+
+.ic-3{
+    width: 94px;
+} */
+
+
+/* Impo Section */
+
+.impo{
+    background-color: rgba(164, 155, 155, 0.162);
+    width: 100%;
+}
+
+.impodiv {
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 9rem 0;
+    /* gap: 6rem; */
+}
+
+.impoleft {
+    font-weight: 400;
+    font-size: 1.7rem;
+    max-width: 40%;
+    text-align: justify;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.imporight {
+    max-width: 45%;
+    font-weight: 350;
+    text-align: justify;
+}
+
+
+/* Offer Section */
+
+.offerSection{
+    max-width: 80%;
+    margin-inline: auto;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.outerOffer {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    text-align: justify;
+}
+
+.offer-title {
+    font-weight: 400;
+    font-size: 1.7rem;
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 1rem;
+}
+
+.offer-content {
+    font-weight: 350;
+}
+
+.offer2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.offer2-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: justify;
+    width: calc(20%);
+    flex-shrink: 0;
+}
+
+.img-card-div{
+    width: 100%;
+    aspect-ratio: 1 / 1.5;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.offer2-card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 1.2px solid lightblue;
+    border-radius: 4px;
+}
+
+.offer2-card-title {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.offer2-card-content {
+    font-weight: 350;
+}
+
+@media screen and (max-width: 1300px) {
+    .icons {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .hero {
+        padding: 2.5rem 0;
+    }
+    .hero-content-org{
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .heroButton {
+        padding: 0.6rem;
+        margin: 1.7rem 0;
+        font-size: 0.9rem;
+    }
+    .icons {
+        max-width: 100%;
+    }
+
+    .impodiv{
+        padding: 7.5rem 0;
+    }
+
+    .impoleft {
+        font-size: 1.55rem;
+        max-width: 40%;
+    }
+    
+    .imporight {
+        max-width: 55%;
+    }
+
+    .outerOffer {
+        max-width: 60%;
+    }
+    
+    .offer-title {
+        font-size: 1.55rem;
+    }
+    
+    .offer-content {
+        font-size: 0.85rem;
+    }
+
+    .offer2-card {
+        width: calc(22%);
+    }
+
+    .offer2-card-title {
+        font-size: 1.1rem;
+    }
+    
+    .offer2-card-content {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .ic-txt1, .ic-txt2{
+        font-size: 9.5px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .hero {
+        padding: 2rem 0;
+        flex-direction: column-reverse;
+    }
+
+    .heroButton {
+        margin: 2rem 0 1.5rem 0;
+    }
+    
+    .icons {
+        padding: 1.5rem 0;
+        max-width: 80%;
+    }
+
+    .impodiv{
+        padding: 7rem 0;
+    }
+
+    .impoleft {
+        font-size: 1.2rem;
+        max-width: 40%;
+    }
+    
+    .imporight {
+        font-size: 0.8rem;
+        max-width: 55%;
+    }
+
+    .outerOffer {
+        max-width: 100%;
+    }
+    
+    .offer-title {
+        font-size: 1.4rem;
+    }
+    
+    .offer-content {
+        font-size: 0.8rem;
+    }
+
+    .offer2-card {
+        width: calc(23%);
+    }
+
+    .offer2-card-title {
+        font-size: 0.9rem;
+    }
+    
+    .offer2-card-content {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero {
+        padding: 1.5rem 0;
+    }
+    
+    .heroButton {
+        margin: 1.8rem 0 1.2rem 0;
+    }
+
+    .icons{
+        max-width: 100%;
+    }
+
+    .impodiv {
+        padding: 4rem 0;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .impoleft {
+        max-width: 100%;
+    }
+    
+    .imporight {
+        max-width: 100%;
+    }
+
+
+    .offer2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    
+    .offer2-card {
+        width: 80%;
+    }
+
+
+    .offer2-card-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.1rem;
+    }
+    
+    .offer2-card-content {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .ic-txt1, .ic-txt2 {
+        font-size: 8px;
+    }
+}

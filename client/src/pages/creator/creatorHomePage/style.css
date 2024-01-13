@@ -10,4 +10,15 @@
 
 .Dash-content{
     width: 100%;
+    background-color: #eff6f6;
+    flex-grow: 1;
+    min-height: 100dvh;
+}
+
+.widgets{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 75%;
+    /* margin-inline: auto; */
 }
