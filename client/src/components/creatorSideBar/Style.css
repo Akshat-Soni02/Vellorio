@@ -7,10 +7,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 180px;
+    width: 200px;
     height: 100vh;
     padding: 15px 0;
     font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
 }
 
 .sb-panel1{
@@ -26,7 +27,7 @@
 }
 
 .logo_img_sb{
-    width: 7rem;
+    width: 7.5rem;
     height: auto;
 }
 
@@ -34,8 +35,8 @@
     display: flex;
     flex-direction: column;
     width: 93%;
-    margin-inline: auto;
-    
+    margin-inline: auto;    
+    padding: 0 5px;
 }
 
 .sb-navs{
@@ -48,7 +49,7 @@
     height: 2.5rem;
     align-items: center;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     /* position: relative; */
 }
 

@@ -11,7 +11,18 @@ import { useNavigate } from 'react-router-dom';
 import { setLoading,resetLoading } from '../../../store/UserSlice';
 import CreatorWidget from '../../../components/creatorWidget/CreatorWidget';
 import { MdDone } from "react-icons/md";
+// import { FaDollarSign } from "react-icons/fa";
+import { RiArrowLeftRightLine } from "react-icons/ri";
+// import { RiTimeFill } from "react-icons/ri";
+import { IoTimeOutline } from "react-icons/io5";
+import { LuUserPlus2 } from "react-icons/lu";
+import { MdOutlineCurrencyRupee } from "react-icons/md";
+import Chart from "chart.js/auto";
+import { CategoryScale } from "chart.js";
+import { Data } from "../../../utils/Data.jsx";
+import LineChart from "../../../components/lineChart/LineChart.jsx";
 
+Chart.register(CategoryScale);
 
 const CreatorHomePage = () => {
   const navigate = useNavigate();
@@ -19,6 +30,9 @@ const CreatorHomePage = () => {
   const {isAuthenticated, loading} = useSelector((state) => state.user);
   const [userName, setUserName] = useState("");
   const [user,setUser] = useState(null);
+  const [chartData, setChartData] = useState({
+    Data
+  });
 
   const getUser = async () => {
     dispatch(setLoading());
@@ -64,14 +78,14 @@ const CreatorHomePage = () => {
           <section className="Dash-content">
             <CreatorHeader heading = "head" avatar="avatara" userName={userName}/>
             <section className="widgets">
-              {/* <CreatorWidget icon={<MdDone/>} amount={16} about={"Delievered On Time"} percent={"+1.2%"}/> */}
-              {/* <CreatorWidget icon={<MdDone/>} amount={16} about={"Delievered On Time"} percent={"+1.2%"}/> */}
-              {/* <CreatorWidget icon={<MdDone/>} amount={16} about={"Delievered On Time"} percent={"+1.2%"}/> */}
-              {/* <CreatorWidget icon={<MdDone/>} amount={16} about={"Delievered On Time"} percent={"+1.2%"}/> */}
-              <CreatorWidget/>
-              <CreatorWidget/>
-              <CreatorWidget/>
-              <CreatorWidget/>
+              <CreatorWidget icon={<MdOutlineCurrencyRupee />} amount={'12,000'} about={"This Month Revenue"} percent={"+1.2%"}/>
+              <CreatorWidget icon={<MdDone/>} amount={'+16'} about={"Projects Accepted"} percent={"+1.2%"}/>
+              <CreatorWidget icon={<RiArrowLeftRightLine />} amount={'92.8%'} about={"Delievered on Time"} percent={"+1.2%"}/>
+              <CreatorWidget icon={<IoTimeOutline />} amount={'1h 8m'} about={"Responsed on Time"} percent={"+1.2%"}/>
+              <CreatorWidget icon={<LuUserPlus2 />} amount={5} about={"New Clients This Month"} percent={"+1.2%"}/>
+            </section>
+            <section className="graph-users">
+              <LineChart chartData={chartData} />
             </section>
           </section>
         </section>

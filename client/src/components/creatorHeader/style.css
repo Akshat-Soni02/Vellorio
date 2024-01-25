@@ -2,12 +2,12 @@
     display: flex;
     justify-content: space-between;
     padding: 1.2rem 1rem 1.2rem 1rem;
-    width: 75%;
+    width: 100%;
 }
 
 .HeadName{
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 .userDet{

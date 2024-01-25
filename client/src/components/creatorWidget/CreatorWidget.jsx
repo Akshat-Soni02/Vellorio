@@ -1,17 +1,16 @@
 import React from 'react'
-import { MdDone } from "react-icons/md";
 import "./style.css";
-const CreatorWidget = (icon,amount,about,percent) => {
+const CreatorWidget = ({icon,amount,about,percent}) => {
   return (
     <section className='widgetItem'>
         <div className="widgetInfo">
-            <div className="widgetIcon"><MdDone/></div>
+            <div className="widgetIcon">{icon}</div>
             <div className="widgetData">
-              <div className="widgetNums">16</div>
-              <div className="widgetTitle">Delievered On Time</div>
+              <div className="widgetNums">{amount}</div>
+              <div className="widgetTitle">{about}</div>
             </div>
         </div>
-        <div className="widgetPer">+1.2</div>
+        <div className="widgetPer">{percent}</div>
     </section>
   )
 }

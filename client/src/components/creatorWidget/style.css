@@ -1,5 +1,5 @@
 .widgetItem{
-    width: 218px;
+    width: 245px;
     padding: 1rem 1.2rem;
     border: 1px solid rgb(209, 205, 205);
     border-radius: 10px;
@@ -9,7 +9,8 @@
 .widgetInfo{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 10px;
 }
 
 .widgetIcon{
@@ -19,6 +20,7 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
+    font-size: 1.2rem;
 }
 
 .widgetData{
@@ -27,8 +29,8 @@
 }
 
 .widgetNums{
-    font-weight: 500;
-    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
 .widgetTitle{
