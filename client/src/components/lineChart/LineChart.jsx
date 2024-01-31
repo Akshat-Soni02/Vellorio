@@ -1,6 +1,9 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
 function LineChart({ chartData }) {
+  if (!chartData) {
+    return <div>Loading...</div>; // or render a placeholder, handle this according to your needs
+  }
   return (
     <div className="chart-container">
       <h2 style={{ textAlign: "center" }}>Line Chart</h2>

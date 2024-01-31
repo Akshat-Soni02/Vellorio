@@ -13,12 +13,21 @@
     background-color: #eff6f6;
     flex-grow: 1;
     min-height: 100dvh;
+    padding: 0 1rem 1rem 1rem;
 }
 
 .widgets{
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
     width: 100%;
     /* margin-inline: auto; */
+}
+
+.graph-users{
+    max-height: 400px;
+}
+
+.creatorHomeGraph{
+    max-width: 620px;
+    height: 100%;
 }

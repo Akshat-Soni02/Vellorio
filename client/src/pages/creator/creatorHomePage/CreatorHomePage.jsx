@@ -31,7 +31,16 @@ const CreatorHomePage = () => {
   const [userName, setUserName] = useState("");
   const [user,setUser] = useState(null);
   const [chartData, setChartData] = useState({
-    Data
+    labels: Data.map((data) => data.year),
+    datasets: [{
+      label: "Users Gained",
+      data: Data.map((data) => data.userGain),
+      backgroundColor: "orange",
+      borderColor: "orange",
+      borderWidth: "1",
+      pointBorderColor: "white"
+    },
+  ],
   });
 
   const getUser = async () => {
@@ -41,7 +50,7 @@ const CreatorHomePage = () => {
         withCredentials: true,
       })
       .then((res) => {
-        setUser(res.data.user);
+        setUser(res.data?.user);
         setUserName(user?.name);
         dispatch(resetLoading());
       })
@@ -85,7 +94,9 @@ const CreatorHomePage = () => {
               <CreatorWidget icon={<LuUserPlus2 />} amount={5} about={"New Clients This Month"} percent={"+1.2%"}/>
             </section>
             <section className="graph-users">
-              <LineChart chartData={chartData} />
+              <div className="creatorHomeGraph">
+                <LineChart chartData={chartData || []}/>
+              </div>
             </section>
           </section>
         </section>
