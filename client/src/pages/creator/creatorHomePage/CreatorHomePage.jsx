@@ -97,6 +97,9 @@ const CreatorHomePage = () => {
               <div className="creatorHomeGraph">
                 <LineChart chartData={chartData || []}/>
               </div>
+              <div className="userRecent">
+                
+              </div>
             </section>
           </section>
         </section>
