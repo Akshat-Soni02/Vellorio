@@ -97,8 +97,14 @@ const CreatorHomePage = () => {
               <div className="creatorHomeGraph">
                 <LineChart chartData={chartData || []}/>
               </div>
-              <div className="userRecent">
-                
+              <div className="active-projects">
+                <div className="act-heading">
+                  <p>Active Projects</p>
+                  <p>See All</p>
+                </div>
+                <div className="content-active-projects">
+                  
+                </div>
               </div>
             </section>
           </section>

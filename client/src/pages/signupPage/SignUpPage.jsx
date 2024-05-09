@@ -5,7 +5,6 @@ import {AiFillEyeInvisible} from "react-icons/ai"
 import {BsArrowRightShort} from "react-icons/bs"
 import {FcGoogle} from "react-icons/fc"
 import {BiLogoFacebook} from "react-icons/bi"
-import {AiOutlineTwitter} from "react-icons/ai"
 import { FaXTwitter } from "react-icons/fa6"
 import {CgProfile} from "react-icons/cg"
 import {FaPencilAlt} from "react-icons/fa"
@@ -29,7 +28,6 @@ const SignUpPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password,setPassword] = useState("");
-  const [direct,setDirect] = useState("Creator");
 
   //Profile Image
   const [profilePhoto, setProfilePhoto] = useState("");
@@ -75,12 +73,7 @@ const SignUpPage = () => {
       toast.success(data.message);
       setTimeout(() => {
         dispatch(login());
-        console.log("Direct:", direct);
-        if(direct === "Creator") {
-          navigate("/creator/profileCreate");
-        } else {
-          navigate("/client/products");
-        }
+        navigate("/creator/profileCreate");
       },1500)
     } catch(error) {
       toast.error(error.response.data.message);
@@ -88,13 +81,6 @@ const SignUpPage = () => {
     }
   };
 
-  const pathDecide = (path) => {
-    if(path === "Creator") {
-      setDirect("Creator");
-    } else {
-      setDirect("Client");
-    }
-  };
 
   return (
     <div className="loadingEff">
@@ -158,10 +144,8 @@ const SignUpPage = () => {
           <div className="sform-authAction">
             <p className="sform-authAction-forgot" tabIndex={0} onClick={() => navigate("/login")}>Login Instead?</p>
           </div>
-          <div className="sform-subtitle">Continue as</div>
           <div className="sform-buttons">
-            <button type='submit'  className="sform-login-button" onClick={() => pathDecide("Creator")}>Creator<BsArrowRightShort/></button>
-            <button type='submit'  className="sform-login-button" onClick={() => pathDecide("Client")}>Client<BsArrowRightShort/></button>
+            <button type='submit'  className="sform-login-button" >Sign Up<BsArrowRightShort/></button>
           </div>
           <div className="sform-line-text-line">
             <div className="or-text">or</div>

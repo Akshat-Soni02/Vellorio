@@ -12,6 +12,7 @@ import CreatorEarnings from './pages/creator/creatorEarnings/CreatorEarnings';
 import CreatorAnalytics from './pages/creator/creatorAnalytics/CreatorAnalytics';
 import CreatorContact from './pages/creator/creatorContact/CreatorContact';
 import Demo from './pages/demo/Demo';
+import Test from './pages/creator/demed/Test';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <Route path='/welcome' element = {<Demo/>} />
         <Route path='/login' element = {<LoginPage/>} />
         <Route path='/register' element = {<SignUpPage/>} />
-        <Route path='/creator/profileCreate' element = {<CreatorProfileCreate/>} />
+        <Route path='/creator/profileCreate' element = {<Test/>} />
         <Route path='/creator/DashBoard' element = {<CreatorHomePage/>} />
         <Route path='/creator/Orders' element = {<CreatorOrders/>} />
         <Route path='/creator/Gigs' element = {<CreatorGigs/>} />
