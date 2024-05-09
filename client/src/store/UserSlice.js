@@ -28,9 +28,24 @@ const userSlice = createSlice({
     },
     resetLoading: (state) => {
       state.loading = false;
-    }
+    },
+    login_creator: (state, action) => {
+      state.isAuthenticated = true;
+      state.loading = false;
+      
+      // Merge old user data with new user data
+      state.user = {
+          ...state.user,
+          description:action.payload.description,
+          languages: action.payload.languages,
+          education: action.payload.education,
+          skills: action.payload.skills,
+          // Add other fields as needed
+      };
+  },
+  
   },
 });
 
-export const { login, logout, setLoading, resetLoading, setCurrentUser} = userSlice.actions;
+export const { login, logout, setLoading, resetLoading, setCurrentUser,login_creator} = userSlice.actions;
 export default userSlice.reducer;

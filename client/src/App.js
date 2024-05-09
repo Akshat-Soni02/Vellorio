@@ -12,10 +12,32 @@ import CreatorEarnings from './pages/creator/creatorEarnings/CreatorEarnings';
 import CreatorAnalytics from './pages/creator/creatorAnalytics/CreatorAnalytics';
 import CreatorContact from './pages/creator/creatorContact/CreatorContact';
 import Demo from './pages/demo/Demo';
-import Test from './pages/creator/demed/Test';
+import { useDispatch } from 'react-redux';
+import { profileRoute } from './api/ApiRoutes';
+import { login,logout,setLoading } from './store/UserSlice';
+import Test from './pages/creator/demed/Test.jsx';
+import { useEffect } from 'react';
+import axios from 'axios';
 
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setLoading());
+    axios
+      .get(profileRoute, {
+        withCredentials: true,
+      })
+      .then((res) => {
+        dispatch(login(res.data.user));
+        console.log(res.data.user);
+      })
+      .catch((error) => {
+        dispatch(logout());
+      });
+  }, []);
+
   return (
     <Router>
       <Routes>

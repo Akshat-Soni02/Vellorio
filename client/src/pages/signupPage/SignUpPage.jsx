@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import {setLoading,login, logout} from "../../store/UserSlice.js";
-import { signupRoute } from '../../api/ApiRoutes.js';
+import { signupRoute,profileRoute } from '../../api/ApiRoutes.js';
 import {Toaster, toast} from 'react-hot-toast';
 import ClipLoader from "react-spinners/ClipLoader";
 import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader.js'
@@ -69,12 +69,18 @@ const SignUpPage = () => {
           withCredentials: true,
         }
       );
-
+      axios
+      .get(profileRoute, {
+        withCredentials: true,
+      })
+      .then((res) => {
+        dispatch(login(res.data.user));
+      });
+      // console.log(data);
       toast.success(data.message);
       setTimeout(() => {
-        dispatch(login());
         navigate("/creator/profileCreate");
-      },1500)
+      },1200)
     } catch(error) {
       toast.error(error.response.data.message);
       dispatch(logout());

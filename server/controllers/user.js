@@ -117,9 +117,7 @@ export const registerCreator = async (req, res, next) => {
       user.description = description;
       user.skills = skills;
       user.education = education;
-  
       await user.save();
-  
       return res.status(200).json({ message: `All The Best ${user.name} !!` });
     } catch (error) {
       next(error);

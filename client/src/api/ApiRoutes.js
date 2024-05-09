@@ -3,3 +3,4 @@ export const signupRoute = `${host}/api/v1/users/new`;
 export const loginRoute = `${host}/api/v1/users/login`;
 export const logoutRoute = `${host}/api/v1/users/logout`;
 export const profileRoute = `${host}/api/v1/users/me`;
+export const creatorRegRoute = `${host}/api/v1/users/creator`;
