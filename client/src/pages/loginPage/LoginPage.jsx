@@ -56,7 +56,7 @@ const LoginPage = () => {
     }
   };
 
-  if(isAuthenticated) navigate("/creator/Dashboard");
+  if(isAuthenticated) navigate("/creator/dashboard");
 
   const directToSignup = () => {
     navigate("/register");

@@ -23,20 +23,20 @@ import axios from 'axios';
 function App() {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(setLoading());
-    axios
-      .get(profileRoute, {
-        withCredentials: true,
-      })
-      .then((res) => {
-        dispatch(login(res.data.user));
-        console.log(res.data.user);
-      })
-      .catch((error) => {
-        dispatch(logout());
-      });
-  }, []);
+  // useEffect(() => {
+  //   dispatch(setLoading());
+  //   axios
+  //     .get(profileRoute, {
+  //       withCredentials: true,
+  //     })
+  //     .then((res) => {
+  //       dispatch(login(res.data.user));
+  //       console.log(res.data.user);
+  //     })
+  //     .catch((error) => {
+  //       dispatch(logout());
+  //     });
+  // }, []);
 
   return (
     <Router>

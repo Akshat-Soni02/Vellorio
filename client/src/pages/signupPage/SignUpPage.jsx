@@ -13,7 +13,7 @@ import "./style.css"
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
-import {setLoading,login, logout} from "../../store/UserSlice.js";
+import {setLoading,login, logout, setCurrentUser} from "../../store/UserSlice.js";
 import { signupRoute,profileRoute } from '../../api/ApiRoutes.js';
 import {Toaster, toast} from 'react-hot-toast';
 import ClipLoader from "react-spinners/ClipLoader";
@@ -49,6 +49,17 @@ const SignUpPage = () => {
     setVisible(!visible);
   };
 
+  const fetchUserProfileAndLogin = () => {
+    axios.get(profileRoute, { withCredentials: true })
+      .then((res) => {
+        dispatch(login(res.data.user));
+      })
+      .catch((error) => {
+        // Handle error if profile fetch fails
+        console.error("Error fetching user profile:", error);
+      });
+  };
+
   const submitHandler = async (e) => {
     e.preventDefault();
     dispatch(setLoading());
@@ -69,17 +80,10 @@ const SignUpPage = () => {
           withCredentials: true,
         }
       );
-      axios
-      .get(profileRoute, {
-        withCredentials: true,
-      })
-      .then((res) => {
-        dispatch(login(res.data.user));
-      });
-      // console.log(data);
       toast.success(data.message);
+      fetchUserProfileAndLogin();
       setTimeout(() => {
-        navigate("/creator/profileCreate");
+        navigate("/creator/profilecreate");
       },1200)
     } catch(error) {
       toast.error(error.response.data.message);

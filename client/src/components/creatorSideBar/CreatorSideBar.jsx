@@ -11,9 +11,10 @@ import { MdOutlineLogout } from "react-icons/md";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const CreatorSideBar = () => {
-  const [page, setPage] = useState("Dashboard");
+  const [page, setPage] = useState("dashboard");
   const navigate = useNavigate();
   const location = useLocation();
+  
 
 
   const changePage = (pg) => {
@@ -29,18 +30,18 @@ const CreatorSideBar = () => {
               <img src={logo} alt='vellorio' width={337} height={92} className='logo_img_sb'/>
             </div>
             <div className="sb-nav-panel">
-                <Link style={{backgroundColor: location.pathname.includes("/creator/Dashboard") ? "#07686b" : "white",
-                              color: location.pathname.includes("/creator/Dashboard") ? "white" : "#07686b"}} className='sb-navs' tabIndex={0} to={"/creator/Dashboard"}><TiThLarge className='sb-icons'/>  Dashboard</Link>
-                <Link style={{backgroundColor: location.pathname.includes("/creator/Orders") ? "#07686b" : "white",
-                              color: location.pathname.includes("/creator/Orders") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/Orders"}><TbBox className='sb-icons'/>  Orders</Link>
-                <Link style={{backgroundColor: location.pathname.includes("/creator/Gigs") ? "#07686b" : "white",
-                              color: location.pathname.includes("/creator/Gigs") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/Gigs"}><TiWaves className='sb-icons'/>  Gigs</Link>
-                <Link style={{backgroundColor: location.pathname.includes("/creator/Earnings") ? "#07686b" : "white",
-                              color: location.pathname.includes("/creator/Earnings") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/Earnings"}><MdOutlineAttachMoney className='sb-icons'/>  Earnings</Link>
-                <Link style={{backgroundColor: location.pathname.includes("/creator/Analytics") ? "#07686b" : "white",
-                              color: location.pathname.includes("/creator/Analytics") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/Analytics"}><IoAnalytics className='sb-icons'/>  Analytics</Link>
-                <Link style={{backgroundColor: location.pathname.includes("/creator/Contact") ? "#07686b" : "white",
-                              color: location.pathname.includes("/creator/Contact") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/Contact"}><RiContactsFill className='sb-icons-last'/>  Contact Us</Link>
+                <Link style={{backgroundColor: location.pathname.includes("/creator/dashboard") ? "#07686b" : "white",
+                              color: location.pathname.includes("/creator/dashboard") ? "white" : "#07686b"}} className='sb-navs' tabIndex={0} to={"/creator/dashboard"}><TiThLarge className='sb-icons'/>  Dashboard</Link>
+                <Link style={{backgroundColor: location.pathname.includes("/creator/orders") ? "#07686b" : "white",
+                              color: location.pathname.includes("/creator/orders") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/orders"}><TbBox className='sb-icons'/>  Orders</Link>
+                <Link style={{backgroundColor: location.pathname.includes("/creator/gigs") ? "#07686b" : "white",
+                              color: location.pathname.includes("/creator/gigs") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/gigs"}><TiWaves className='sb-icons'/>  Gigs</Link>
+                <Link style={{backgroundColor: location.pathname.includes("/creator/earnings") ? "#07686b" : "white",
+                              color: location.pathname.includes("/creator/earnings") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/earnings"}><MdOutlineAttachMoney className='sb-icons'/>  Earnings</Link>
+                <Link style={{backgroundColor: location.pathname.includes("/creator/analytics") ? "#07686b" : "white",
+                              color: location.pathname.includes("/creator/analytics") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/analytics"}><IoAnalytics className='sb-icons'/>  Analytics</Link>
+                <Link style={{backgroundColor: location.pathname.includes("/creator/contact") ? "#07686b" : "white",
+                              color: location.pathname.includes("/creator/contact") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/contact"}><RiContactsFill className='sb-icons-last'/>  Contact Us</Link>
             </div>
           </div>
           <div className="sb-panel2">
