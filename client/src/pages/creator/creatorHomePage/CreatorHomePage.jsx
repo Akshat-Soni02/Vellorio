@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {profileRoute} from '../../../api/ApiRoutes';
 import { toast,Toaster } from 'react-hot-toast';
 import ClipLoader from "react-spinners/ClipLoader";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { setLoading,resetLoading } from '../../../store/UserSlice';
 import CreatorWidget from '../../../components/creatorWidget/CreatorWidget';
 import { MdDone } from "react-icons/md";
@@ -21,6 +21,9 @@ import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import { Data } from "../../../utils/Data.jsx";
 import LineChart from "../../../components/lineChart/LineChart.jsx";
+
+import ava from "../../../assets/test.png";
+import ListWrapper from '../../../components/lists/ListWrapper.jsx';
 
 Chart.register(CategoryScale);
 
@@ -42,6 +45,31 @@ const CreatorHomePage = () => {
     },
   ],
   });
+
+  const clients = [
+    {
+      name: 'Client 1',
+      photo: {ava},
+      paymentDetails: 'Payment details for Client 1'
+    },
+    {
+      name: 'Client 2',
+      photo: {ava},
+      paymentDetails: 'Payment details for Client 2'
+    },
+    // Add more clients as needed
+  ];
+
+  const renderActiveProjectsItem = (client) => (
+    <>
+      <img src={client.photo} alt={client.name} />
+      <div className="client-details">
+        <h3>{client.name}</h3>
+        <p>Payment Details: {client.paymentDetails}</p>
+      </div>
+      <button className="chat-icon">Chat</button>
+    </>
+  );
 
   const getUser = async () => {
     dispatch(setLoading());
@@ -100,10 +128,10 @@ const CreatorHomePage = () => {
               <div className="active-projects">
                 <div className="act-heading">
                   <p>Active Projects</p>
-                  <p>See All</p>
+                  <Link to={"/creator/orders"}>See All</Link>
                 </div>
                 <div className="content-active-projects">
-                  
+                  <ListWrapper items={clients} renderItem={renderActiveProjectsItem} />
                 </div>
               </div>
             </section>

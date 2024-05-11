@@ -82,7 +82,7 @@
 } */
 
 .sb-navs:hover,.sb-navs:focus{
-    background-color: #07686b;
+    background-color: #074647;
     /* filter: invert(1); */
     outline: none;
     cursor: pointer;

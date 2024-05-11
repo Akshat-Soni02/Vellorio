@@ -5,7 +5,7 @@ function LineChart({ chartData }) {
     return <div>Loading...</div>; // or render a placeholder, handle this according to your needs
   }
   return (
-    <div className="chart-container">
+    <div className="chart-container" style={{width:"100%", height:"100%"}}>
       {/* <h2 style={{ textAlign: "center" }}>Line Chart</h2> */}
       <Line
         data={chartData}
@@ -32,6 +32,8 @@ function LineChart({ chartData }) {
             }
           }
         }}
+        width={null}
+        height={null}
       />
     </div>
   );

@@ -80,6 +80,7 @@ const SignUpPage = () => {
           withCredentials: true,
         }
       );
+      console.log("hello world:::");
       toast.success(data.message);
       fetchUserProfileAndLogin();
       setTimeout(() => {

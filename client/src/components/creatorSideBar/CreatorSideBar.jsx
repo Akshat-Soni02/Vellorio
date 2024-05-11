@@ -30,18 +30,18 @@ const CreatorSideBar = () => {
               <img src={logo} alt='vellorio' width={337} height={92} className='logo_img_sb'/>
             </div>
             <div className="sb-nav-panel">
-                <Link style={{backgroundColor: location.pathname.includes("/creator/dashboard") ? "#07686b" : "white",
-                              color: location.pathname.includes("/creator/dashboard") ? "white" : "#07686b"}} className='sb-navs' tabIndex={0} to={"/creator/dashboard"}><TiThLarge className='sb-icons'/>  Dashboard</Link>
-                <Link style={{backgroundColor: location.pathname.includes("/creator/orders") ? "#07686b" : "white",
-                              color: location.pathname.includes("/creator/orders") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/orders"}><TbBox className='sb-icons'/>  Orders</Link>
-                <Link style={{backgroundColor: location.pathname.includes("/creator/gigs") ? "#07686b" : "white",
-                              color: location.pathname.includes("/creator/gigs") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/gigs"}><TiWaves className='sb-icons'/>  Gigs</Link>
-                <Link style={{backgroundColor: location.pathname.includes("/creator/earnings") ? "#07686b" : "white",
-                              color: location.pathname.includes("/creator/earnings") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/earnings"}><MdOutlineAttachMoney className='sb-icons'/>  Earnings</Link>
-                <Link style={{backgroundColor: location.pathname.includes("/creator/analytics") ? "#07686b" : "white",
-                              color: location.pathname.includes("/creator/analytics") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/analytics"}><IoAnalytics className='sb-icons'/>  Analytics</Link>
-                <Link style={{backgroundColor: location.pathname.includes("/creator/contact") ? "#07686b" : "white",
-                              color: location.pathname.includes("/creator/contact") ? "white" : "#07686b"}} className="sb-navs" tabIndex='0' to={"/creator/contact"}><RiContactsFill className='sb-icons-last'/>  Contact Us</Link>
+                <Link style={{backgroundColor: location.pathname.includes("/creator/dashboard") ? "#074647" : "white",
+                              color: location.pathname.includes("/creator/dashboard") ? "white" : "#033234"}} className='sb-navs' tabIndex={0} to={"/creator/dashboard"}><TiThLarge className='sb-icons'/>  Dashboard</Link>
+                <Link style={{backgroundColor: location.pathname.includes("/creator/orders") ? "#074647" : "white",
+                              color: location.pathname.includes("/creator/orders") ? "white" : "#033234"}} className="sb-navs" tabIndex='0' to={"/creator/orders"}><TbBox className='sb-icons'/>  Orders</Link>
+                <Link style={{backgroundColor: location.pathname.includes("/creator/gigs") ? "#074647" : "white",
+                              color: location.pathname.includes("/creator/gigs") ? "white" : "#033234"}} className="sb-navs" tabIndex='0' to={"/creator/gigs"}><TiWaves className='sb-icons'/>  Gigs</Link>
+                <Link style={{backgroundColor: location.pathname.includes("/creator/earnings") ? "#074647" : "white",
+                              color: location.pathname.includes("/creator/earnings") ? "white" : "#033234"}} className="sb-navs" tabIndex='0' to={"/creator/earnings"}><MdOutlineAttachMoney className='sb-icons'/>  Earnings</Link>
+                <Link style={{backgroundColor: location.pathname.includes("/creator/analytics") ? "#074647" : "white",
+                              color: location.pathname.includes("/creator/analytics") ? "white" : "#033234"}} className="sb-navs" tabIndex='0' to={"/creator/analytics"}><IoAnalytics className='sb-icons'/>  Analytics</Link>
+                <Link style={{backgroundColor: location.pathname.includes("/creator/contact") ? "#074647" : "white",
+                              color: location.pathname.includes("/creator/contact") ? "white" : "#033234"}} className="sb-navs" tabIndex='0' to={"/creator/contact"}><RiContactsFill className='sb-icons-last'/>  Contact Us</Link>
             </div>
           </div>
           <div className="sb-panel2">
