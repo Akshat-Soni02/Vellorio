@@ -11,6 +11,8 @@ import { useNavigate, Link } from 'react-router-dom';
 import { setLoading,resetLoading } from '../../../store/UserSlice';
 import CreatorWidget from '../../../components/creatorWidget/CreatorWidget';
 import { MdDone } from "react-icons/md";
+import { MdAccessTime } from "react-icons/md";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 // import { FaDollarSign } from "react-icons/fa";
 import { RiArrowLeftRightLine } from "react-icons/ri";
 // import { RiTimeFill } from "react-icons/ri";
@@ -49,26 +51,40 @@ const CreatorHomePage = () => {
   const clients = [
     {
       name: 'Client 1',
-      photo: {ava},
-      paymentDetails: 'Payment details for Client 1'
+      ClientPhoto: ava,
+      projectPhoto: ava,
+      paymentDetails: 'Payment details for Client 1',
+      projectName: 'Random project1',
+      projectTime: '2h',
     },
     {
       name: 'Client 2',
-      photo: {ava},
-      paymentDetails: 'Payment details for Client 2'
+      ClientPhoto: ava,
+      projectPhoto: ava,
+      paymentDetails: 'Payment details for Client 2',
+      projectName: 'Random project2',
+      projectTime: '2h',
     },
     // Add more clients as needed
   ];
 
   const renderActiveProjectsItem = (client) => (
-    <>
-      <img src={client.photo} alt={client.name} />
-      <div className="client-details">
-        <h3>{client.name}</h3>
-        <p>Payment Details: {client.paymentDetails}</p>
+    <section className='Active-project-details'>
+      <div className='Active-project-details-proInfo'>
+        <img className='Active-project-details-proInfo-img' src={client.projectPhoto} alt={client.projectName} />
+        <div className="Active-project-details-proInfo-text">
+          <p className='Active-project-details-proInfo-proName'>{client.projectName}</p>
+          <p className='Active-project-details-proInfo-cliName'>{client.name}</p>
+        </div>
       </div>
-      <button className="chat-icon">Chat</button>
-    </>
+      <div className='Active-project-details-timeInfo'>
+        <MdAccessTime className='Active-project-details-timeInfo-icon'/>
+        <p className='Active-project-details-timeInfo-time'>{client.projectTime}</p>
+      </div>
+      <div className='Active-project-details-menu'>
+        <HiOutlineDotsHorizontal className='Active-project-details-menu-icon'/>
+      </div>
+    </section>
   );
 
   const getUser = async () => {
@@ -127,8 +143,8 @@ const CreatorHomePage = () => {
               </div>
               <div className="active-projects">
                 <div className="act-heading">
-                  <p>Active Projects</p>
-                  <Link to={"/creator/orders"}>See All</Link>
+                  <p className='act-heading-head'>Active Projects</p>
+                  <Link className ='act-heading-link' to={"/creator/orders"}>See All</Link>
                 </div>
                 <div className="content-active-projects">
                   <ListWrapper items={clients} renderItem={renderActiveProjectsItem} />
