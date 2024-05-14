@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../../assets/logo_transparent.png'
+import logo2 from '../../assets/vellorio-favicon-color.png'
 import "./Style.css";
 import { TiThLarge } from "react-icons/ti";
 import { TbBox } from "react-icons/tb";
@@ -23,11 +24,10 @@ const CreatorSideBar = () => {
   }
 
   return (
-    <>
         <section className="sb-outer">
           <div className="sb-panel1">
             <div className="sb-img-container">
-              <img src={logo} alt='vellorio' width={337} height={92} className='logo_img_sb'/>
+              <img src={logo2} alt='vellorio' width={128} height={128} className='logo_img_sb'/>
             </div>
             <div className="sb-nav-panel">
                 <Link style={{backgroundColor: location.pathname.includes("/creator/dashboard") ? "#074647" : "white",
@@ -52,7 +52,6 @@ const CreatorSideBar = () => {
             </div>
           </div>
         </section>
-    </>
   )
 }
 

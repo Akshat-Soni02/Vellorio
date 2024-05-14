@@ -65,6 +65,38 @@ const CreatorHomePage = () => {
       projectName: 'Random project2',
       projectTime: '2h',
     },
+    {
+      name: 'Client 3',
+      ClientPhoto: ava,
+      projectPhoto: ava,
+      paymentDetails: 'Payment details for Client 2',
+      projectName: 'Random project2',
+      projectTime: '2h',
+    },
+    {
+      name: 'Client 4',
+      ClientPhoto: ava,
+      projectPhoto: ava,
+      paymentDetails: 'Payment details for Client 2',
+      projectName: 'Random project2',
+      projectTime: '2h',
+    },
+    {
+      name: 'Client 5',
+      ClientPhoto: ava,
+      projectPhoto: ava,
+      paymentDetails: 'Payment details for Client 2',
+      projectName: 'Random project2',
+      projectTime: '2h',
+    },
+    {
+      name: 'Client 6',
+      ClientPhoto: ava,
+      projectPhoto: ava,
+      paymentDetails: 'Payment details for Client 2',
+      projectName: 'Random project2',
+      projectTime: '2h',
+    },
     // Add more clients as needed
   ];
 
@@ -86,6 +118,21 @@ const CreatorHomePage = () => {
       </div>
     </section>
   );
+
+  const renderLatestClientsItem = (client) => (
+    <section className='lc-details'>
+      <div className='lc-details-proInfo'>
+        <img className='lc-details-proInfo-img' src={client.ClientPhoto} alt={client.name} />
+        <p className='lc-details-proInfo-proName'>{client.name}</p>
+      </div>
+      <div className='lc-details-timeInfo'>
+        <p className='lc-details-timeInfo-time'>{client.projectName}</p>
+      </div>
+      <div className='lc-details-menu'>
+        <p className="lc-chat-icon">Chat</p>
+      </div>
+    </section>
+  )
 
   const getUser = async () => {
     dispatch(setLoading());
@@ -149,6 +196,19 @@ const CreatorHomePage = () => {
                 <div className="content-active-projects">
                   <ListWrapper items={clients} renderItem={renderActiveProjectsItem} />
                 </div>
+              </div>
+            </section>
+            <section className="latest-top">
+              <div className='latest-clients'>
+                  <div className="lc-heading">
+                    <p className='lc-heading-head'>Latest Clients</p>
+                  </div>
+                  <div className="content-lc">
+                    <ListWrapper items={clients} renderItem={renderLatestClientsItem} />
+                  </div>
+              </div>
+              <div className='top-gigs-container'>
+                
               </div>
             </section>
           </section>
