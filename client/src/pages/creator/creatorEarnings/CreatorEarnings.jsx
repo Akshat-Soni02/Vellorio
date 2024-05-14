@@ -1,19 +1,13 @@
-import React from 'react'
-import CreatorSideBar from '../../../components/creatorSideBar/CreatorSideBar'
+import React from "react";
 
 const CreatorEarnings = () => {
   return (
     <>
-      <section className="Dash">
-          <section className="MainSb">
-            <CreatorSideBar/>
-          </section>
-          <section className="Dash-content">
-            ear
-          </section>
-        </section>
+      <section className="earning-page">
+        <section className="earning-content">ear</section>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default CreatorEarnings
+export default CreatorEarnings;

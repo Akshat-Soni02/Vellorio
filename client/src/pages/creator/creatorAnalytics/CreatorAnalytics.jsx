@@ -1,19 +1,13 @@
-import React from 'react'
-import CreatorSideBar from '../../../components/creatorSideBar/CreatorSideBar'
+import React from "react";
 
 const CreatorAnalytics = () => {
   return (
     <>
-      <section className="Dash">
-          <section className="MainSb">
-            <CreatorSideBar/>
-          </section>
-          <section className="Dash-content">
-            ana
-          </section>
-        </section>
+      <section className="ana-page">
+        <section className="ana-content">ana</section>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default CreatorAnalytics
+export default CreatorAnalytics;

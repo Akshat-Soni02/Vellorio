@@ -1,19 +1,13 @@
-import React from 'react'
-import CreatorSideBar from '../../../components/creatorSideBar/CreatorSideBar'
+import React from "react";
 
 const CreatorOrders = () => {
   return (
     <>
-      <section className="Dash">
-          <section className="MainSb">
-            <CreatorSideBar/>
-          </section>
-          <section className="Dash-content">
-            order
-          </section>
-        </section>
+      <section className="order-page">
+        <section className="order-content">order</section>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default CreatorOrders
+export default CreatorOrders;

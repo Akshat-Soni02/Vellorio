@@ -1,0 +1,177 @@
+.Dash-content {
+  width: 100%;
+  flex-grow: 1;
+  min-height: 100vh;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.widgets {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.graph-users {
+  height: 325px;
+  display: flex;
+  width: 100%;
+  gap: 1.1rem;
+}
+
+.creatorHomeGraph {
+  height: 100%;
+  width: 60%;
+  box-shadow: 0px 0.01px 2px rgba(0, 0, 0, 0.284);
+}
+
+.active-projects {
+  width: 40%;
+  height: 100%;
+  box-shadow: 0px 0.01px 2px rgba(0, 0, 0, 0.284);
+}
+
+.act-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.1rem 1.5rem;
+  align-items: center;
+}
+
+.act-heading-head {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.act-heading-link {
+  text-decoration: none;
+  color: #6ea9f6;
+  font-size: 1.08rem;
+}
+
+.act-heading-link:hover,
+.act-heading-link:focus {
+  color: #679ee5;
+  cursor: pointer;
+}
+
+.act-heading-link:active {
+  color: #112a46;
+}
+
+.Active-project-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  font-family: "Roboto", sans-serif;
+  border-top: 2px solid rgba(0, 0, 0, 0.09);
+  overflow-y: auto;
+}
+
+.Active-project-details-proInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.Active-project-details-proInfo-img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.Active-project-details-proInfo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.Active-project-details-proInfo-proName {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.Active-project-details-proInfo-cliName {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.Active-project-details-timeInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.latest-top {
+  height: 325px;
+  display: flex;
+  width: 100%;
+  gap: 1.1rem;
+}
+
+.latest-clients {
+  width: 60%;
+  height: 100%;
+  box-shadow: 0px 0.01px 2px rgba(0, 0, 0, 0.284);
+}
+
+.lc-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.1rem 1.5rem;
+  align-items: center;
+}
+
+.lc-heading-head {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.lc-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  font-family: "Roboto", sans-serif;
+  border-top: 2px solid rgba(0, 0, 0, 0.09);
+  overflow-y: auto;
+}
+
+.lc-details-proInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.lc-details-proInfo-img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.lc-details-proInfo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.lc-details-proInfo-proName {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.lc-details-proInfo-cliName {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.lc-details-timeInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

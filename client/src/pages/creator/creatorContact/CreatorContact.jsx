@@ -1,19 +1,13 @@
-import React from 'react'
-import CreatorSideBar from '../../../components/creatorSideBar/CreatorSideBar'
+import React from "react";
 
 const CreatorContact = () => {
   return (
     <>
-      <section className="Dash">
-        <section className="MainSb">
-          <CreatorSideBar/>
-        </section>
-        <section className="Dash-content">
-          con
-        </section>
+      <section className="contact-page">
+        <section className="contact-content">con</section>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default CreatorContact
+export default CreatorContact;
