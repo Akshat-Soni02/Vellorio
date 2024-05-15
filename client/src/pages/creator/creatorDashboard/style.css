@@ -1,15 +1,17 @@
 .Dash-content {
   width: 100%;
-  flex-grow: 1;
   min-height: 100vh;
-  padding: 0 1rem 1rem 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .widgets {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 .graph-users {
@@ -106,31 +108,41 @@
 }
 
 .latest-top {
-  height: 325px;
+  height: 315px;
   display: flex;
   width: 100%;
   gap: 1.1rem;
+  justify-content: space-between;
 }
 
 .latest-clients {
-  width: 60%;
+  width: 58%;
   height: 100%;
   box-shadow: 0px 0.01px 2px rgba(0, 0, 0, 0.284);
 }
 
-.lc-heading {
+.top-gigs {
+  width: 40%;
+  height: 100%;
+  box-shadow: 0px 0.01px 2px rgba(0, 0, 0, 0.284);
+}
+
+.lc-heading,
+.tg-heading {
   display: flex;
   justify-content: space-between;
   padding: 1.1rem 1.5rem;
   align-items: center;
 }
 
-.lc-heading-head {
+.lc-heading-head,
+.tg-heading-head {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.lc-details {
+.lc-details,
+.tg-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -140,14 +152,16 @@
   overflow-y: auto;
 }
 
-.lc-details-proInfo {
+.lc-details-proInfo,
+.tg-details-proInfo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.8rem;
 }
 
-.lc-details-proInfo-img {
+.lc-details-proInfo-img,
+.tg-details-proInfo-img {
   width: 33px;
   height: 33px;
   border-radius: 50%;
@@ -155,23 +169,37 @@
   object-position: center;
 }
 
-.lc-details-proInfo-text {
+.lc-details-proInfo-text,
+.tg-details-proInfo-text {
   display: flex;
   flex-direction: column;
 }
 
-.lc-details-proInfo-proName {
+.lc-details-proInfo-proName,
+.tg-details-proInfo-proName {
   font-size: 1rem;
   font-weight: 500;
 }
 
-.lc-details-proInfo-cliName {
+.lc-details-proInfo-cliName,
+.tg-details-proInfo-cliName {
   font-size: 0.8rem;
   color: gray;
 }
 
-.lc-details-timeInfo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.lc-details-timeInfo,
+.tg-details-timeInfo {
+  font-weight: 350;
+  font-size: 0.9rem;
+}
+
+.lc-details-menu {
+  border: 1px solid #6ea9f6;
+  padding: 0.24rem;
+  border-radius: 2px;
+}
+
+.lc-chat-icon {
+  text-decoration: none;
+  color: #6ea9f6;
 }

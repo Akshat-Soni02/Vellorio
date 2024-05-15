@@ -128,12 +128,27 @@ const CreatorDashboard = (userName) => {
         />
         <p className="lc-details-proInfo-proName">{client.name}</p>
       </div>
-      <div className="lc-details-timeInfo">
-        <p className="lc-details-timeInfo-time">{client.projectName}</p>
-      </div>
+      <p className="lc-details-timeInfo">{client.projectName}</p>
       <div className="lc-details-menu">
-        <p className="lc-chat-icon">Chat</p>
+        <Link className="lc-chat-icon">Chat</Link>
       </div>
+    </section>
+  );
+
+  const renderTopGigsItem = (client) => (
+    <section className="tg-details">
+      <div className="tg-details-proInfo">
+        <img
+          className="tg-details-proInfo-img"
+          src={client.ClientPhoto}
+          alt={client.name}
+        />
+        <p className="tg-details-proInfo-proName">{client.name}</p>
+      </div>
+      <p className="tg-details-timeInfo">{client.projectName}</p>
+      {/* <div className="lc-details-menu">
+        <Link className="lc-chat-icon">Chat</Link>
+      </div> */}
     </section>
   );
 
@@ -192,6 +207,14 @@ const CreatorDashboard = (userName) => {
         </div>
       </section>
       <section className="latest-top">
+        <div className="top-gigs">
+          <div className="tg-heading">
+            <p className="tg-heading-head">Top Gigs</p>
+          </div>
+          <div className="content-tg">
+            <ListWrapper items={clients} renderItem={renderTopGigsItem} />
+          </div>
+        </div>
         <div className="latest-clients">
           <div className="lc-heading">
             <p className="lc-heading-head">Latest Clients</p>
@@ -200,7 +223,6 @@ const CreatorDashboard = (userName) => {
             <ListWrapper items={clients} renderItem={renderLatestClientsItem} />
           </div>
         </div>
-        <div className="top-gigs-container"></div>
       </section>
     </section>
   );

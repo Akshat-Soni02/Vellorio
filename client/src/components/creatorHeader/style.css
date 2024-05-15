@@ -1,57 +1,58 @@
-.Crh{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.2rem 1rem 1.2rem 1rem;
-    width: 100%;
+.Crh {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 1.2rem 1rem 1.2rem 1rem; */
+  padding: 0 1rem;
+  width: 100%;
 }
 
-.HeadName{
-    font-weight: 600;
-    font-size: 1.7rem;
+.HeadName {
+  font-weight: 600;
+  font-size: 1.7rem;
 }
 
-.userDet{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
+.userDet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.Crh-user{
-    display: flex;
-    align-items: center;
-    /* background-color: antiquewhite; */
-    gap: 0.3rem;
-    padding: 3px;
-    border-radius: 15px;
+.Crh-user {
+  display: flex;
+  align-items: center;
+  /* background-color: antiquewhite; */
+  gap: 0.3rem;
+  padding: 3px;
+  border-radius: 15px;
 }
 
-.bellIcon{
-    padding: 0.3rem;
-    font-size: 1.9rem;
-    color: rgb(72, 71, 71);
-    border-radius: 50%;
+.bellIcon {
+  padding: 0.3rem;
+  font-size: 1.9rem;
+  color: rgb(72, 71, 71);
+  border-radius: 50%;
 }
 
-.Crh-data{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.Crh-data {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.Crh-naam{
-    font-weight: 450;
-    font-size: 1.05rem;
+.Crh-naam {
+  font-weight: 450;
+  font-size: 1.05rem;
 }
 
-.userAva{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center
+.userAva {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.downIcon{
-    color: rgb(99, 98, 98);
+.downIcon {
+  color: rgb(99, 98, 98);
 }
