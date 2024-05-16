@@ -22,7 +22,7 @@ import { CategoryScale } from "chart.js";
 
 Chart.register(CategoryScale);
 
-const CreatorDashboard = (userName) => {
+const CreatorDashboard = (user) => {
   const [chartData, setChartData] = useState({
     labels: Data.map((data) => data.year),
     datasets: [
@@ -154,7 +154,7 @@ const CreatorDashboard = (userName) => {
 
   return (
     <section className="Dash-content">
-      <CreatorHeader heading="head" avatar="avatara" userName={userName} />
+      <CreatorHeader heading="head" avatar="avatara" userName={user.name} />
       <section className="widgets">
         <CreatorWidget
           icon={<MdOutlineCurrencyRupee />}

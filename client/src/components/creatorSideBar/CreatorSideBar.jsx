@@ -45,7 +45,7 @@ const CreatorSideBar = () => {
           <Link
             style={{
               backgroundColor: location.pathname.includes("/creator/orders")
-                ? "#0b5d5f10"
+                ? "#07464782"
                 : "#053132",
               color: location.pathname.includes("/creator/orders")
                 ? "white"
@@ -60,7 +60,7 @@ const CreatorSideBar = () => {
           <Link
             style={{
               backgroundColor: location.pathname.includes("/creator/gigs")
-                ? "#0b5d5f10"
+                ? "#07464782"
                 : "#053132",
               color: location.pathname.includes("/creator/gigs")
                 ? "white"
@@ -75,7 +75,7 @@ const CreatorSideBar = () => {
           <Link
             style={{
               backgroundColor: location.pathname.includes("/creator/earnings")
-                ? "#0b5d5f10"
+                ? "#07464782"
                 : "#053132",
               color: location.pathname.includes("/creator/earnings")
                 ? "white"
@@ -90,7 +90,7 @@ const CreatorSideBar = () => {
           <Link
             style={{
               backgroundColor: location.pathname.includes("/creator/analytics")
-                ? "#0b5d5f10"
+                ? "#07464782"
                 : "#053132",
               color: location.pathname.includes("/creator/analytics")
                 ? "white"
@@ -105,7 +105,7 @@ const CreatorSideBar = () => {
           <Link
             style={{
               backgroundColor: location.pathname.includes("/creator/contact")
-                ? "#0b5d5f10"
+                ? "#07464782"
                 : "#053132",
               color: location.pathname.includes("/creator/contact")
                 ? "white"

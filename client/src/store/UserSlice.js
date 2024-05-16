@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   isAuthenticated: false,
@@ -7,13 +7,13 @@ const initialState = {
 };
 
 const userSlice = createSlice({
-  name: 'user',
+  name: "user",
   initialState,
   reducers: {
     setCurrentUser: (state, action) => {
       state.user = action.payload;
     },
-    login: (state,action) => {
+    login: (state, action) => {
       state.isAuthenticated = true;
       state.loading = false;
       state.user = action.payload;
@@ -32,20 +32,24 @@ const userSlice = createSlice({
     login_creator: (state, action) => {
       state.isAuthenticated = true;
       state.loading = false;
-      
-      // Merge old user data with new user data
+
       state.user = {
-          ...state.user,
-          description:action.payload.description,
-          languages: action.payload.languages,
-          education: action.payload.education,
-          skills: action.payload.skills,
-          // Add other fields as needed
+        ...state.user,
+        description: action.payload.description,
+        languages: action.payload.languages,
+        education: action.payload.education,
+        skills: action.payload.skills,
       };
-  },
-  
+    },
   },
 });
 
-export const { login, logout, setLoading, resetLoading, setCurrentUser,login_creator} = userSlice.actions;
+export const {
+  login,
+  logout,
+  setLoading,
+  resetLoading,
+  setCurrentUser,
+  login_creator,
+} = userSlice.actions;
 export default userSlice.reducer;

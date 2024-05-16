@@ -16,31 +16,29 @@ import { setLoading, resetLoading } from "../../../store/UserSlice";
 const CreatorHomePage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { isAuthenticated, loading } = useSelector((state) => state.user);
-  const [userName, setUserName] = useState("");
+  const { loading } = useSelector((state) => state.user);
+  // const [userName, setUserName] = useState("");
   const [user, setUser] = useState(null);
 
   const getUser = async () => {
     dispatch(setLoading());
-    axios
-      .get(profileRoute, {
+    try {
+      const res = await axios.get(profileRoute, {
         withCredentials: true,
-      })
-      .then((res) => {
-        setUser(res.data?.user);
-        setUserName(user?.name);
-        dispatch(resetLoading());
-      })
-      .catch((e) => {
-        toast.error(e.response.data.message);
       });
+      setUser(res.data?.user);
+      // setUserName(res.data?.user?.name);
+    } catch (e) {
+      toast.error(e.response.data.message);
+      navigate("/login");
+    } finally {
+      dispatch(resetLoading());
+    }
   };
 
   useEffect(() => {
     getUser();
   }, []);
-
-  if (!isAuthenticated) return navigate("/login");
 
   return (
     <>
@@ -49,7 +47,6 @@ const CreatorHomePage = () => {
           <ClipLoader
             color={"36D9B8"}
             loading={loading}
-            // cssOverride={override}
             size={35}
             aria-label="Loading Spinner"
             data-testid="loader"
@@ -62,7 +59,7 @@ const CreatorHomePage = () => {
             <CreatorSideBar />
           </section>
           <section className="cr-content">
-            <CreatorDashboard userName={userName} />
+            {user && <CreatorDashboard user={user} />}
           </section>
         </section>
       )}
