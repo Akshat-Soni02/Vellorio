@@ -8,8 +8,9 @@
 
 .cr-content {
   flex-grow: 1;
-  background-color: #eff6f6;
-  margin-left: 220px;
+  /* background-color: #eff6f6; */
+  background-color: white;
+  margin-left: 240px;
 }
 
 .MainSb {

@@ -1,11 +1,13 @@
 import React from "react";
+import CreatorSideBar from "../../../components/creatorSideBar/CreatorSideBar";
 
 const CreatorContact = () => {
   return (
     <>
-      <section className="contact-page">
-        <section className="contact-content">con</section>
+      <section className="MainSb">
+        <CreatorSideBar />
       </section>
+      <section className="cr-content">contact</section>
     </>
   );
 };

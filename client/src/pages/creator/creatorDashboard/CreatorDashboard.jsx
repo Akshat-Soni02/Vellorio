@@ -174,12 +174,12 @@ const CreatorDashboard = (userName) => {
           about={"Delievered on Time"}
           percent={"+1.2%"}
         />
-        <CreatorWidget
+        {/* <CreatorWidget
           icon={<IoTimeOutline />}
           amount={"1h 8m"}
           about={"Responsed on Time"}
           percent={"+1.2%"}
-        />
+        /> */}
         <CreatorWidget
           icon={<LuUserPlus2 />}
           amount={5}

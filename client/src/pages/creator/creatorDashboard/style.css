@@ -9,7 +9,9 @@
 
 .widgets {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-evenly; */
+  justify-content: center;
+  gap: 2.5rem;
   width: 100%;
   /* margin-bottom: 2rem; */
 }

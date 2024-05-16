@@ -1,11 +1,13 @@
 import React from "react";
+import CreatorSideBar from "../../../components/creatorSideBar/CreatorSideBar";
 
 const CreatorGigs = () => {
   return (
     <>
-      <section className="gigs-page">
-        <section className="gigs-content">gig</section>
+      <section className="MainSb">
+        <CreatorSideBar />
       </section>
+      <section className="cr-content">Gigs</section>
     </>
   );
 };

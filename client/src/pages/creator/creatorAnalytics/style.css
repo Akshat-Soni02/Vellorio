@@ -1,9 +1,14 @@
-.Dash{
-    display: flex;
-    align-items: start;
+.cr-content {
+  flex-grow: 1;
+  /* background-color: #eff6f6; */
+  background-color: white;
+  margin-left: 240px;
 }
 
-.MainSb{
-    position: sticky;
-    top: 0;
+.MainSb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-height: 100vh;
+  /* overflow-y: auto; */
 }
